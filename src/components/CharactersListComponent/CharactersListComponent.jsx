@@ -16,11 +16,12 @@ const CharacterListComponent = () => {
             })
         })
     }, []);
+    console.log(characters);
     
     return (
         <div>
             {characters.map((character, index) => 
-                <CharacterComponent name={character.name} key={index} />
+                <CharacterComponent name={character.name} key={index} image={character.image} episode={character.episode}/>
             )}
         </div>
     )
