@@ -4,7 +4,7 @@ import './index.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import CharactersListPage from './pages/CharactersListPage.jsx'
 import EpisodesListPage from './pages/EpisodesListPage/EpisodesListPage.jsx'
-import EpisodeDetailsPage from './pages/EpisodeDetailsPage.jsx'
+import EpisodeDetailsPage from './pages/EpisodeDetailsPage/EpisodeDetailsPage.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
