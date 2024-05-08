@@ -1,0 +1,61 @@
+.Character {
+    display: flex;
+    color: white;
+    background-color: rgb(60, 62, 68);
+    border-radius: 0.5rem;
+  }
+  .Character__Image {
+    width: 230px;
+    height: 220px;
+  }
+  .Character__Info {
+    margin-left: 1rem;
+    font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI";
+    font-size: 0.89rem;
+    font-weight: normal;
+  }
+  .Character__Info__Name {
+    font-size: 1.9rem;
+    font-weight: 800;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+  .Character__Info__DescriptionContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 0.3rem;
+  }
+  .Character__Info__DescriptionContainer__Status {
+    margin-right: 0.3rem;
+  }
+  .Character__Info__DescriptionContainer__Status--alive {
+    color: green;
+  }
+  .Character__Info__DescriptionContainer__Status--dead {
+    color: red;
+  }
+  .Character__Info__DescriptionContainer__Description {
+    margin: 0;
+  }
+  .Character__Info__Location {
+    margin-top: 1.5rem;
+  }
+  .Character__Info__Location__Title {
+    color: rgb(158, 158, 158);
+    margin-bottom: 0;
+  }
+  .Character__Info__Location__Value {
+    margin-top: 0.5rem;
+    color: rgb(245, 245, 245);
+  }
+  .Character__Info__Episode {
+    margin-top: 1.5rem;
+  }
+  .Character__Info__Episode__Title {
+    color: rgb(158, 158, 158);
+    margin-bottom: 0;
+  }
+  .Character__Info__Episode__Value {
+    margin-top: 0.5rem;
+    color: rgb(245, 245, 245);
+  }

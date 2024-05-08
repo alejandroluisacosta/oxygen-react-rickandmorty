@@ -21,7 +21,7 @@ const CharacterListComponent = () => {
     return (
         <div>
             {characters.map((character, index) => 
-                <CharacterComponent name={character.name} key={index} image={character.image} episode={character.episode}/>
+                <CharacterComponent name={character.name} key={index} image={character.image} episode={character.episode} location={character.location.name} species={character.species}/>
             )}
         </div>
     )
