@@ -1,0 +1,9 @@
+.EpisodeListPage {
+    padding: 1rem;
+}
+
+.EpisodeListPage__EpisodeGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
