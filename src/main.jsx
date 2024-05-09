@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import CharactersListPage from './pages/CharactersListPage.jsx'
 import EpisodesListPage from './pages/EpisodesListPage/EpisodesListPage.jsx'
 import EpisodeDetailsPage from './pages/EpisodeDetailsPage/EpisodeDetailsPage.jsx'
+import CharacterCreate from './pages/CharacterCreate/CharacterCreate.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -13,6 +14,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="" element={<CharactersListPage />}/>
          <Route path="episodes" element={<EpisodesListPage />}/>
         <Route path="episodes/:episodeId" element={<EpisodeDetailsPage />}/>
+        <Route path="create-character" element={<CharacterCreate/>}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
