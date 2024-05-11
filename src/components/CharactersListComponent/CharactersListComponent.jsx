@@ -19,11 +19,14 @@ const CharacterListComponent = () => {
     console.log(characters);
     
     return (
-        <div>
-            {characters.map((character, index) => 
-                <CharacterComponent name={character.name} key={index} image={character.image} episode={character.episode} location={character.location.name} species={character.species}/>
-            )}
-        </div>
+        <>
+            <h1>Character List</h1>
+            <div className="CharacterList">
+                {characters.map((character, index) => 
+                    <CharacterComponent name={character.name} key={index} image={character.image} episode={character.episode} location={character.location.name} species={character.species}/>
+                )}
+            </div>
+        </>
     )
 }
 export default CharacterListComponent;
