@@ -14,7 +14,7 @@ const CharacterCreate = () => {
                 <input type="text" id="CharacterName" placeholder="Don Jorge"/>
                 <label htmlFor="CharacterSpecies">Species:</label>
                 <input type="text" id="CharacterSpecies" placeholder="Human"/>
-                <button type="submit">Create!</button>
+                <button type="submit">Create</button>
             </form>
         </>
     )
