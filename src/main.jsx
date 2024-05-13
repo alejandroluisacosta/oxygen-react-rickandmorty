@@ -7,11 +7,11 @@ import EpisodesListPage from './pages/EpisodesListPage/EpisodesListPage.jsx'
 import EpisodeDetailsPage from './pages/EpisodeDetailsPage/EpisodeDetailsPage.jsx'
 import CharacterCreate from './pages/CharacterCreate/CharacterCreate.jsx'
 import { Provider } from 'react-redux'
-import { Store } from './app/Store'
+import { store } from './app/store.js'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Provider Store={Store}>
+    <Provider store={ store }>
     <BrowserRouter>
         <Routes>
           <Route path="" element={<CharactersListPage />}/>

@@ -1,3 +1,7 @@
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { addCharacter } from "../../Features/CharactersSlice/CharactersSlice";
+
 const CharacterCreate = () => {
 
     const submitHandler = (event) => {
@@ -5,6 +9,12 @@ const CharacterCreate = () => {
         console.log(event.target.elements.CharacterName.value);
         console.log(event.target.elements.CharacterSpecies.value);
     }
+
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(addCharacter("a"))
+    }, [])
 
     return (
         <>
