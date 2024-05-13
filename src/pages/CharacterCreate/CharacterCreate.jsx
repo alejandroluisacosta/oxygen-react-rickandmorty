@@ -13,7 +13,7 @@ const CharacterCreate = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(addCharacter("a"))
+        dispatch(addCharacter({name: "Alex", Species: "Human"}))
     }, [])
 
     return (

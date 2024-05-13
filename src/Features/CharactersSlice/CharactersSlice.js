@@ -10,4 +10,4 @@ export const CharactersSlice = createSlice({
     }
 }) 
 
-export const { addCharacter } = CharactersSlice;
+export const { addCharacter } = CharactersSlice.actions ;
