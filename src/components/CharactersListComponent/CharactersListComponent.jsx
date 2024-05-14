@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import CharacterComponent from "../CharacterComponent/CharacterComponent";
 import { useDispatch, useSelector } from "react-redux";
 import { GetCharactersThunk } from "../../Features/CharactersSlice/CharactersThunk";
+import { NavLink } from "react-router-dom";
 
 const characterUrl = 'https://rickandmortyapi.com/api/character';
 
@@ -31,12 +32,13 @@ const CharacterListComponent = () => {
         else
             alert("Error");
     }, [CharactersStatus, dispatch, Characters]);
-    
+    console.log(data)
     return <>
             {loading ? 
             <p>Loading...</p> 
             : 
             <div>
+                <NavLink to='/create-character'>Create</NavLink>
                 <h1>Character List</h1>
                 <div className="CharacterList">
                     {data.map((character, index) => 

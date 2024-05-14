@@ -9,7 +9,7 @@ const CharacterCreate = () => {
 
     const submitHandler = (event) => {
         event.preventDefault();
-        dispatch(addCharacter({name: event.target.elements.CharacterName.value, species: event.target.elements.CharacterSpecies.value}));
+        dispatch(addCharacter({name: event.target.elements.CharacterName.value, species: event.target.elements.CharacterSpecies.value, location: {name: ""}, image:'/public/don-jorge.png'}));
     }
 
 
