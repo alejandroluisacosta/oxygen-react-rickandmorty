@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { addCharacter, removeCharacter } from "../../Features/CharactersSlice/CharactersSlice";
+import { NavLink } from "react-router-dom";
 
 const CharacterCreate = () => {
     
@@ -9,8 +10,6 @@ const CharacterCreate = () => {
     const submitHandler = (event) => {
         event.preventDefault();
         dispatch(addCharacter({name: event.target.elements.CharacterName.value, species: event.target.elements.CharacterSpecies.value}));
-        console.log(event.target.elements.CharacterName.value);
-        console.log(event.target.elements.CharacterSpecies.value);
     }
 
 
@@ -27,6 +26,7 @@ const CharacterCreate = () => {
                 <input type="text" id="CharacterSpecies" placeholder="Human"/>
                 <button type="submit">Create</button>
             </form>
+            <NavLink to='/'>Home</NavLink>
         </>
     )
 }

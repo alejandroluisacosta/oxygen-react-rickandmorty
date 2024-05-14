@@ -11,8 +11,6 @@ export const CharactersSlice = createSlice({
     reducers: {
         addCharacter: (state, action) => {
             state.data.push(action.payload);
-            console.log(state);
-            console.log(action);
         },
         removeCharacter: (state, action) => {
             state.data.filter(character => character.id !== action.payload.id);

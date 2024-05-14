@@ -27,7 +27,6 @@ const CharacterListComponent = () => {
         else if (CharactersStatus === 'fulfilled') {
             setLoading(false);
             setData(Characters);
-            console.log(data)
         }
         else
             alert("Error");
