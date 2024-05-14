@@ -1,19 +1,20 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { addCharacter } from "../../Features/CharactersSlice/CharactersSlice";
+import { addCharacter, removeCharacter } from "../../Features/CharactersSlice/CharactersSlice";
 
 const CharacterCreate = () => {
+    
+    const dispatch = useDispatch();
 
     const submitHandler = (event) => {
         event.preventDefault();
+        dispatch(addCharacter({name: event.target.elements.CharacterName.value, species: event.target.elements.CharacterSpecies.value}));
         console.log(event.target.elements.CharacterName.value);
         console.log(event.target.elements.CharacterSpecies.value);
     }
 
-    const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(addCharacter({name: "Alex", Species: "Human"}))
     }, [])
 
     return (

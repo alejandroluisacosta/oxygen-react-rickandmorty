@@ -3,6 +3,6 @@ import { CharactersSlice } from "../Features/CharactersSlice/CharactersSlice";
 
 export const store = configureStore({
     reducer: {
-        Character: CharactersSlice.reducer
+        Characters: CharactersSlice.reducer
     }
 })
