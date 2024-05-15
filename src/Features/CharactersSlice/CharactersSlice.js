@@ -32,4 +32,5 @@ export const CharactersSlice = createSlice({
     }
 }) 
 
+
 export const { addCharacter, removeCharacter } = CharactersSlice.actions;
