@@ -13,3 +13,17 @@ export const getEpisodesThunk = createAsyncThunk(("Episodes/getEpisodes"), async
         console.log(error);
     }
 })
+
+export const getEpisodeThunk = createAsyncThunk(("Episodes/getEpisode"), async (episodeId) => {
+    try {
+        const request = await fetch(`https://rickandmortyapi.com/api/episode/${episodeId}`);
+        if (request.ok) {
+            const Episode = await request.json();
+            return Episode.results;
+        }
+        return false;
+    }
+    catch (error) { 
+        console.log(error);
+    }
+})

@@ -13,7 +13,7 @@ export const CharactersSlice = createSlice({
             state.data.push(action.payload);
         },
         removeCharacter: (state, action) => {
-            state.data.filter(character => character.id !== action.payload.id);
+            state.data = state.data.filter(character => character.id !== action.payload.id);
         }
     },
     extraReducers: (builder) => {

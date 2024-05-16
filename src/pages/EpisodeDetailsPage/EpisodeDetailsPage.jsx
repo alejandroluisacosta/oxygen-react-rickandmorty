@@ -8,17 +8,6 @@ const EpisodeDetailsPage = () => {
     const [ episodeDetails, setEpisodeDetails] = useState();
     const [characters, setCharacters ] = useState([]);
     const { episodeId } = useParams();
-    const episodeUrl = `https://rickandmortyapi.com/api/episode/${episodeId}`;
-
-    useEffect(() => {
-        fetch(episodeUrl).then(response => {
-            if (response.ok) {
-                response.json().then(jsonData => {
-                    setEpisodeDetails(jsonData);
-                }).catch(error => console.log(error));
-            }
-        }).catch(error => console.log(error));
-    }, [])
 
     useEffect(() => {
         if (episodeDetails) {
