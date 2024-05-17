@@ -2,11 +2,15 @@ import { useEffect, useState } from "react";
 import CharacterComponent from "../../components/CharacterComponent/CharacterComponent";
 import { useParams } from "react-router-dom";
 import './EpisodeDetailsPage.css';
+import { getEpisodeThunk } from "../../Features/EpisodesSlice/EpisodesThunk";
+import { useSelector } from "react-redux";
 
 const EpisodeDetailsPage = () => {
 
     const [ episodeDetails, setEpisodeDetails] = useState();
+    const [ loading, setLoading ] = useState(false);
     const [characters, setCharacters ] = useState([]);
+    // const EpisodeStatus = useSelector(state => state.)
     const { episodeId } = useParams();
 
     useEffect(() => {
