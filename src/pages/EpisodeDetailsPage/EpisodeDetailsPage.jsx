@@ -10,7 +10,8 @@ const EpisodeDetailsPage = () => {
     const [ episodeDetails, setEpisodeDetails] = useState();
     const [ loading, setLoading ] = useState(false);
     const [characters, setCharacters ] = useState([]);
-    const EpisodeDetails = useSelector(state => state.EpisodeDetails.data);
+    const EpisodeDetailsData = useSelector(state => state.EpisodeDetails.data.Episode);
+    const CharactersData = useSelector(state => state.EpisodeDetails.data.Characters);
     const EpisodeDetailsStatus = useSelector(state => state.EpisodeDetails.status);
     const EpisodeDetailsError = useSelector(state => state.EpisodeDetails.error);
     const { episodeId } = useParams();
@@ -23,9 +24,12 @@ const EpisodeDetailsPage = () => {
             setLoading(true);
         else if (EpisodeDetailsStatus === 'fulfilled') {
             setLoading(false);
-            setEpisodeDetails(EpisodeDetails);
+            setEpisodeDetails(EpisodeDetailsData);
+            setCharacters(CharactersData)
+            console.log(EpisodeDetailsData);
+            console.log(CharactersData);
         }
-    }, [EpisodeDetailsStatus, dispatch, EpisodeDetails]);
+    }, [EpisodeDetailsStatus, dispatch, EpisodeDetailsData, CharactersData]);
     
     // useEffect(() => {
     //     if (episodeDetails) {

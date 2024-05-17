@@ -5,7 +5,13 @@ export const EpisodeDetailsThunk = createAsyncThunk(("Episodes/getEpisode"), asy
         const request = await fetch(`https://rickandmortyapi.com/api/episode/${episodeId}`);
         if (request.ok) {
             const Episode = await request.json();
-            return Episode;
+            const CharactersIds = Episode.characters.map(url => url.split('/').pop());
+            const AllCharactersIds = CharactersIds.join(',');
+            const Characters = await fetch(`https://rickandmortyapi.com/api/character/${AllCharactersIds}`);
+            const CharactersJson = await Characters.json();
+            const EpisodeWithCharacters = {Episode: Episode, Characters: CharactersJson};
+            console.log(EpisodeWithCharacters);
+            return EpisodeWithCharacters;
         }
         return false;
     }
@@ -13,3 +19,4 @@ export const EpisodeDetailsThunk = createAsyncThunk(("Episodes/getEpisode"), asy
         console.log(error);
     }
 })
+
