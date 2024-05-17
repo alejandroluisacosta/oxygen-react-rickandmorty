@@ -30,18 +30,6 @@ const EpisodeDetailsPage = () => {
             console.log(CharactersData);
         }
     }, [EpisodeDetailsStatus, dispatch, EpisodeDetailsData, CharactersData]);
-    
-    // useEffect(() => {
-    //     if (episodeDetails) {
-    //     Promise.all(episodeDetails?.characters.map(character => 
-    //         fetch(character).then(response => {
-    //             if (response.ok) {
-    //                 return response.json()
-    //             }}) 
-    //     )).then(characterData => {
-    //         setCharacters(characterData);
-    //     })}
-    // }, [episodeDetails])
 
     return (
         <div className="EpisodeDetailsPage">
