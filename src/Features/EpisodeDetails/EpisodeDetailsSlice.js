@@ -5,7 +5,7 @@ export const EpisodeDetailsSlice = createSlice({
     name: 'EpisodeDetails',
     initialState: {
         status: 'idle',
-        data: ({name: ""}),
+        data: [{name: ""}],
         error: null
     },
     reducers: {},
